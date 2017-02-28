@@ -1,0 +1,168 @@
+.pg-nav {
+.abs;
+.right(0);
+.top(0);
+.bottom(0);
+.bg-col-grayDk;
+.txt-col-wht;	
+.over-hide;
+.transition(0.5s);
+.w(30);
+	
+	&.nav-closed {
+		li {
+		.opacity(0);	
+		}
+	}
+	
+	&.nav-open {
+		li {
+		.opacity(1);	
+		}
+	}
+
+	.pag-nav-inner {
+	.w(30);	
+	}
+	
+	#close-nav-btn {
+	.abs;
+	.bottom(1);
+	.right(1);
+	.w(5);
+	.h(5);
+	.pad-all(0);
+	.no-border;
+	.bg-col-gray;
+	.txt-col-wht;
+	.no-rounded;
+		i {
+		.block;
+		.w(5);
+		.h(5);
+		.line-h(5);
+		text-align: center;	
+		.font-size(2);
+		}	
+		
+		&:active, &:focus {
+		.bg-col-wht;
+		.txt-col-gray-dk;
+		}
+	}
+
+	ul#menu-user-menu, ul#menu-admin-menu, ul#menu-referer-menu {
+	.list-style-gone;
+	.mag-bot(0);
+	.over-hide;
+	.pad-top(1);
+	
+		li {
+		.transition(1.0s);	
+		}
+	
+		a {
+		.line-h(4);	
+		.txt-col-wht;
+		.caps;
+		.font-size(1.6);
+		.font-slab-serif;
+		.no-text-dec;
+		.block;
+		.pad-left(1.5);
+		.pad-right(1.5);
+			&:active, &:focus {
+			.txt-col-gray-dk;
+			.bg-col(@gray);
+				i {
+				.txt-col-red;	
+				}
+			}
+		}
+		
+		i {
+		.pad-right(0.5);	
+		}
+			
+		li {
+		.mag-bot(0);
+			&.pull-right {
+			float: none;	
+			}
+		}
+			
+	}
+}
+
+#masthead {
+.bg-col(@wht);
+.abs;
+.top(0);
+.left(0);
+.right(0);
+z-index: 10;
+		
+	.user-name {
+	.pad-top(2.5);
+	.line-h(4);	
+	.font-size(1.4);
+	.font-slab-serif;
+	.caps;
+		i {
+		.pad-right(0.5);	
+		}
+		
+		a {
+		.txt-col-gray-dk;
+		.no-text-dec;
+			&:active, &:focus {
+			.txt-col-gray;
+			}	
+		}
+	}
+	
+	.logo {
+	.mag-all(0);
+	.rel;
+	.mag-top(0.5);
+	.mag-bot(0.8);
+	
+		a {
+		.block;
+		.h(8);
+		.bg-img("tlw-logo-wide.png");
+		.bg-repeat(no-repeat);
+		background-position: center center;
+		.bg-size(contain);
+					
+			&:hover, &:active, &:focus{
+			.opacity(0.5);	
+			}
+			
+		}
+		
+		span {
+		.abs;
+		.bottom(0);
+		.left(0);
+		width: 100%;
+		.caps;
+		.font-slab-serif;
+		.font-size(1.4);
+		letter-spacing: 0.8px;
+		text-align: center;
+		}
+			
+	}
+	
+	#nav-btn {
+	.no-rounded;
+	.border(@grayDk; 0.4);
+	.mag-top(2);	
+	}
+
+}
+
+html.svg #masthead .logo a {
+.bg-img("tlw-logo-wide.svg");	
+}

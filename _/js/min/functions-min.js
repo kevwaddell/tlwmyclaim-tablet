@@ -1,0 +1,1 @@
+!function($){var n="touchstart";$(document).ready(function(){$("body").on(n,"button#nav-btn",function(){return $("#page").toggleClass("nav-open"),$(".pg-nav").toggleClass("nav-open nav-closed"),!1}),$("body").on(n,"button#close-nav-btn",function(){return $("#page").removeClass("nav-open"),$(".pg-nav").toggleClass("nav-open nav-closed"),!1})})}(window.jQuery);
