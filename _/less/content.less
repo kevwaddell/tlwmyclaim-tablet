@@ -573,3 +573,70 @@ margin: 20px 0px 20px 0px;
 		}
 	}
 }
+
+.entry {
+.pad-top(1.5);
+.pad-bot(2.5);
+.pad-left(3);
+.pad-right(3);
+	hr {
+	.no-border;
+	.rule;
+	}
+	
+	h2, h3 {
+	.caps;
+	.font-slab-serif;	
+	.line-h(3);
+	}	
+	
+	h2, h3, h4, h5, h6 {
+	.txt-col-gray;	
+	}
+	
+	p.lead {
+	.txt-col-gray;
+	.font-size(3);
+	.line-h(3.4);	
+	}
+	
+	//Unordered list
+	ul {
+	list-style: none;
+	.pad-left(2);
+	.mag-bot(2);
+		li {
+		.pad-left(2);
+		.rel;
+		}
+		li:before {
+		.abs;
+		.left(0);
+		content: "\00BB";
+		.col(@gray);
+		.bold;		
+		.mag-right(1);
+		}
+		
+	}
+	
+	//Ordered list
+	ol {
+	list-style: none;
+	.pad-left(2);
+	.mag-bot(2);
+	list-style-position: inside;
+	counter-reset: item;
+		li {
+		//counter-increment: list-counter;
+		//.pad-left(2);
+		.rel;
+			&:before {
+			content: counters(item, ".") " - ";
+			counter-increment: item;
+			.col(@gray);
+			.bold;
+			}
+		}
+	}
+}

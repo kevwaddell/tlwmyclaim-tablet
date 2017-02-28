@@ -3580,6 +3580,7 @@ COLOUR STRIP
   padding-bottom: 10px;
   position: relative;
   background-color: #7A1039;
+  border-bottom: 4px solid white;
 }
 #global-tel-num .container-fluid {
   padding-top: 0px;
@@ -4547,11 +4548,98 @@ html.svg #masthead .logo a {
   background-color: #7A1039;
   color: white;
 }
+.entry {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.entry hr {
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 1px;
+  position: relative;
+}
+.entry hr:before,
+.entry hr:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+}
+.entry hr:before {
+  bottom: -1px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(#918F8F));
+  background-image: -webkit-linear-gradient(left, transparent, #918F8F);
+  background-image: -moz-linear-gradient(left, transparent, #918F8F);
+  background-image: -o-linear-gradient(left, transparent, #918F8F);
+}
+.entry hr:after {
+  right: 0px;
+  bottom: -1px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#918F8F), to(transparent));
+  background-image: -webkit-linear-gradient(left, #918F8F, transparent);
+  background-image: -moz-linear-gradient(left, #918F8F, transparent);
+  background-image: -o-linear-gradient(left, #918F8F, transparent);
+}
+.entry h2,
+.entry h3 {
+  text-transform: uppercase;
+  font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 30px;
+}
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6 {
+  color: #918F8F;
+}
+.entry p.lead {
+  color: #918F8F;
+  font-size: 30px;
+  line-height: 34px;
+}
+.entry ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.entry ul li {
+  padding-left: 20px;
+  position: relative;
+}
+.entry ul li:before {
+  position: absolute;
+  left: 0px;
+  content: "\00BB";
+  color: #918F8F;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.entry ol {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  list-style-position: inside;
+  counter-reset: item;
+}
+.entry ol li {
+  position: relative;
+}
+.entry ol li:before {
+  content: counters(item, ".") " - ";
+  counter-increment: item;
+  color: #918F8F;
+  font-weight: bold;
+}
 /** --------------------------- /
 /* Footer area */
 /* --------------------------- */
 .site-footer {
-  border-top: 4px solid white;
   background-color: #4b4b4b;
   color: white;
   padding-top: 20px;
@@ -4600,11 +4688,12 @@ html.svg #masthead .logo a {
 }
 .site-footer .footer-links ul a {
   color: white;
+  text-decoration: none;
 }
 .site-footer .footer-links ul a:hover,
 .site-footer .footer-links ul a:active,
 .site-footer .footer-links ul a:focus {
-  color: #C60751;
+  color: #918F8F;
 }
 .site-footer .visit-site-btn {
   font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
