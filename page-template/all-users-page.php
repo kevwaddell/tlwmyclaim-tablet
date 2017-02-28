@@ -21,15 +21,15 @@ $users = get_users( $users_args );
 <?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
-		<article <?php post_class(); ?>>
-			
-			<div class="jumbotron wht-border-bottom">
-				<div class="container-fluid">
-				<?php the_content(); ?>	
-				</div>
+					
+		<div class="jumbotron wht-border-bottom">
+			<div class="container-fluid">
+			<?php the_content(); ?>	
 			</div>
+		</div>
 			
+		<article <?php post_class(); ?>>
+
 			<?php if (!empty($users)) { ?>
 			<section id="users-list">
 			<div class="container-fluid">	
