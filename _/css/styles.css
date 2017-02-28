@@ -3591,7 +3591,7 @@ COLOUR STRIP
   height: 100%;
   top: 0px;
   left: 0px;
-  background-image: url(img/thin-stripe-wht.png);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/thin-stripe-wht.png);
   z-index: 0;
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
@@ -3811,7 +3811,7 @@ COLOUR STRIP
 #masthead .logo a {
   display: block;
   height: 80px;
-  background-image: url(img/tlw-logo-wide.png);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/tlw-logo-wide.png);
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: contain;
@@ -3848,7 +3848,7 @@ COLOUR STRIP
   margin-top: 20px;
 }
 html.svg #masthead .logo a {
-  background-image: url(img/tlw-logo-wide.svg);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/tlw-logo-wide.svg);
 }
 /** --------------------------- /
 /* Main content area */
@@ -3879,7 +3879,7 @@ html.svg #masthead .logo a {
   right: 0px;
   bottom: 0px;
   top: 0px;
-  background-image: url(img/icon-pattern-bg.png);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/icon-pattern-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -4542,7 +4542,7 @@ html.svg #masthead .logo a {
   height: 40px;
   width: 280px;
   margin: auto;
-  background-image: url(img/tlw-logo-wide-wht.png);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/tlw-logo-wide-wht.png);
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-background-size: contain;
@@ -4610,7 +4610,7 @@ html.svg #masthead .logo a {
   background-color: #7A1039;
 }
 html.svg .site-footer #tlw-footer-logo {
-  background-image: url(img/tlw-logo-wide-wht.svg);
+  background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/tlw-logo-wide-wht.svg);
 }
 /** --------------------------- /
 /* User styles */
