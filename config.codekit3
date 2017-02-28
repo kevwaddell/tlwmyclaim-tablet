@@ -133,6 +133,14 @@
 		"oAP": "\/_\/css\/fonts\/OpenSans-Light-webfont.woff",
 		"oF": 0
 		},
+	"\/_\/css\/img\/icon-pattern-bg.png": {
+		"ft": 32768,
+		"iS": 132772,
+		"oA": 0,
+		"oAP": "\/_\/css\/img\/icon-pattern-bg.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/_\/css\/img\/thin-stripe-wht.png": {
 		"ft": 32768,
 		"iS": 87,
