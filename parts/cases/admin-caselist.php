@@ -1,8 +1,8 @@
 <tbody>
 	<tr>
-		<th width="33%" class="text-center">Case referrence:</th>
-		<th width="33%" class="text-center">Client name:</th>
-		<th width="34%" class="text-center"><i class="fa fa-eye fa-lg"></i></th>
+		<th width="35%" class="text-center">Case referrence:</th>
+		<th width="35%" class="text-center">Client name:</th>
+		<th width="30%" class="text-center"><i class="fa fa-eye fa-lg"></i></th>
   	</tr>
   	<?php while ( have_posts() ) : the_post(); ?>
   	<?php
@@ -18,7 +18,7 @@
   	<tr class="<?php echo ($case_status == "open") ? 'success':'warning'; ?>">
 	  	<td><?php echo $case_ref; ?></td>
 	  	<td><?php echo $client_personal[title]; ?> <?php echo $client_personal[forename]; ?> <?php echo $client_personal[surname]; ?></td>
-	  	<td><a href="<?php the_permalink(); ?>" class="btn btn-<?php echo ($case_status == "open") ? 'success':'danger'; ?>">View case details <i class="fa fa-chevron-right"></i></a></td>
+	  	<td><a href="<?php the_permalink(); ?>" class="caps font-slab-serif btn btn-block btn-default">View case details <i class="fa fa-angle-right pull-right"></i></a></td>
   	</tr>
   	<?php endwhile; ?>
 </tbody>

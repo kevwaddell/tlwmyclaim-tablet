@@ -84,12 +84,6 @@ $user_id = get_current_user_id();
 								</table>
 									
 							</div>	
-							
-							<a href="<?php echo get_author_posts_url($post->post_author); ?>" class="red-btn btn btn-block btn-lg">
-								Client profile
-								<i class="fa fa-vcard fa-lg"></i>
-							</a>
-
 							<?php } ?>
 							
 							<div class="panel panel-default">
@@ -119,7 +113,15 @@ $user_id = get_current_user_id();
 									
 							</div>	
 							
-							<?php if (count($case_progress) > 1) { ?>
+							<?php if ( current_user_can( 'administrator' ) ) { ?>
+							<a href="<?php echo get_author_posts_url($post->post_author); ?>" class="red-btn btn btn-block btn-lg">
+								Client profile
+								<i class="fa fa-vcard fa-lg"></i>
+							</a>
+
+							<?php } ?>
+							
+							<?php if (count($case_progress) > 0) { ?>
 							<div class="panel panel-default">
 							
 								<div class="panel-heading text-center">Case history</div>	

@@ -82,8 +82,8 @@
 							?>
 							<tr class="<?php echo ($case_status == "open") ? 'success':'warning'; ?>">
 							  	<td class="text-center"><?php echo $case_ref; ?></td>
-							  	<td class="text-center caps"><?php echo $case_status; ?></td>
-							  	<td><a href="<?php the_permalink($claim->ID); ?>" class="btn btn-<?php echo ($case_status == "open") ? 'success':'danger'; ?>">View case details <i class="fa fa-chevron-right"></i></a></td>
+							  	<td class="text-center caps"><span class="label label-<?php echo ($case_status == "open") ? 'success':'warning'; ?>"><?php echo $case_status; ?></span></td>
+							  	<td><a href="<?php the_permalink($claim->ID); ?>" class="btn btn-default btn-block">View case details <i class="fa fa-angle-right pull-right"></i></a></td>
 							</tr><!-- #post-## -->
 					
 						
