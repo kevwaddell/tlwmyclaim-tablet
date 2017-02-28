@@ -4490,9 +4490,39 @@ html.svg #masthead .logo a {
 .gform_wrapper .gform_body li.gfield.gfield_error {
   padding: 10px;
 }
-.gform_wrapper .gform_footer input.gform_button {
+.gform_wrapper input[type=text],
+.gform_wrapper input[type=url],
+.gform_wrapper input[type=email],
+.gform_wrapper input[type=tel],
+.gform_wrapper input[type=number],
+.gform_wrapper input[type=password] {
+  border: 1px solid #918F8F;
+  height: 50px;
+}
+.gform_wrapper input[type=text]:focus,
+.gform_wrapper input[type=url]:focus,
+.gform_wrapper input[type=email]:focus,
+.gform_wrapper input[type=tel]:focus,
+.gform_wrapper input[type=number]:focus,
+.gform_wrapper input[type=password]:focus {
+  border-color: #C60751;
+}
+.gform_wrapper .gform_body textarea.large {
+  height: 100px;
+  border: 1px solid #918F8F;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.gform_wrapper .gform_body textarea.large:focus {
+  height: 200px;
+  border-color: #C60751;
+}
+.gform_wrapper .gform_footer input.gform_button,
+.gform_wrapper .gform_footer input[type=submit] {
   display: block;
-  width: 100%;
+  width: 100% !important;
   background-color: #C60751;
   border: none;
   color: white;
@@ -4507,7 +4537,9 @@ html.svg #masthead .logo a {
   position: relative;
 }
 .gform_wrapper .gform_footer input.gform_button:active,
-.gform_wrapper .gform_footer input.gform_button:focus {
+.gform_wrapper .gform_footer input[type=submit]:active,
+.gform_wrapper .gform_footer input.gform_button:focus,
+.gform_wrapper .gform_footer input[type=submit]:focus {
   background-color: #7A1039;
   color: white;
 }

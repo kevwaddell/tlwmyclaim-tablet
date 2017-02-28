@@ -524,10 +524,33 @@ margin: 20px 0px 20px 0px;
 	.pad-all(1);	
 	}
 	
+	input[type=text],
+	input[type=url],
+	input[type=email],
+	input[type=tel],
+	input[type=number],
+	input[type=password] {
+	.border(@gray, 0.1);
+	.h(5);
+		&:focus {
+		.border-col(@red);	
+		}	
+	}
+	
+	.gform_body textarea.large {
+	.h(10);	
+	.border(@gray, 0.1);
+	.transition(0.5s, ease-out);
+		&:focus {
+		.h(20);
+		.border-col(@red);
+		}
+	}
+	
 	.gform_footer {
-		input.gform_button {
+		input.gform_button, input[type=submit] {
 		.block;
-		width: 100%;
+		width: 100% !important;
 		.bg-col-red;
 		.no-border;
 		.txt-col-wht;
