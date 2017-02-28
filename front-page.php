@@ -23,15 +23,15 @@
 				?>
 				<?php the_content(); ?>	
 				<div class="banner-links">	
-					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-dashboard"></i>
 						<?php echo get_the_title($dashboard_pg->ID); ?>
 					</a>
-					<a href="<?php echo get_permalink($your_claim_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($your_claim_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-folder-open"></i>
 						<?php echo get_the_title($your_claim_pg->ID); ?>
 					</a>
-					<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-vcard"></i>
 						<?php echo get_the_title($account_pg->ID); ?>
 					</a>
@@ -45,15 +45,15 @@
 				?>
 				<?php echo $banner_intro; ?>
 				<div class="banner-links">
-					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-dashboard"></i>
 						<?php echo get_the_title($dashboard_pg->ID); ?>
 					</a>
-					<a href="<?php echo get_permalink($cases_pg); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($cases_pg); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-folder-open"></i>
 						<?php echo get_the_title($cases_pg); ?>
 					</a>
-					<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-vcard"></i>
 						<?php echo get_the_title($account_pg->ID); ?>
 					</a>
@@ -68,15 +68,15 @@
 				?>
 				<?php echo $banner_intro; ?>
 				<div class="banner-links">	
-					<a href="<?php echo get_permalink($cases_pg); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($cases_pg); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-folder-open"></i>
 						<?php echo get_the_title($cases_pg); ?>
 					</a>
-					<a href="<?php echo get_permalink($clients_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($clients_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-users"></i>
 						<?php echo get_the_title($clients_pg->ID); ?>
 					</a>
-					<a href="<?php echo get_permalink($referrers_pg->ID ); ?>" class="btn btn-default btn-block btn-lg">
+					<a href="<?php echo get_permalink($referrers_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-building"></i>
 						<?php echo get_the_title($referrers_pg->ID); ?>
 					</a>
@@ -94,7 +94,7 @@
 				<div class="container-fluid">
 					<?php echo $banner_intro; ?>
 					<div class="banner-links">
-						<a href="<?php echo get_permalink( $login_pg->ID ); ?>" class="btn btn-default btn-block btn-lg"><i class="fa fa-sign-in"></i>Login now</a>
+						<a href="<?php echo get_permalink( $login_pg->ID ); ?>" class="btn btn-block btn-lg"><i class="fa fa-sign-in"></i>Login now</a>
 					</div>
 				</div>
 			</div>

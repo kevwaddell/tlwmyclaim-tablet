@@ -131,9 +131,9 @@ Template Name: User Claims Page
 					</div>
 						<?php } ?>
 						
-						<button id="contact-handler-btn" class="red-btn btn btn-default btn-block btn-lg"><i class="fa fa-comments fa-lg"></i>Message your case handler</button>
-						<a href="<?php echo get_permalink( $account_pg->ID ); ?>" class="red-btn btn btn-default btn-block btn-lg"><i class="fa fa-vcard fa-lg"></i>View Your Account details</a>
-						<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" class="red-btn btn btn-default btn-block btn-lg"><i class="fa fa-envelope fa-lg"></i><?php echo get_the_title($contact_pg->ID); ?></a>
+						<button id="contact-handler-btn" class="red-btn btn btn-block btn-lg"><i class="fa fa-comments fa-lg"></i>Message your case handler</button>
+						<a href="<?php echo get_permalink( $account_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-vcard fa-lg"></i>View Your Account details</a>
+						<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-envelope fa-lg"></i><?php echo get_the_title($contact_pg->ID); ?></a>
 					</div><!-- end of col -->
 					
 				</div><!-- end of row -->	

@@ -10,7 +10,7 @@
 				<div class="copyright-legal text-center">&copy; 2016 TLW Solicitors. All rights reserved.<br>Authorised and regulated by the <a href="http://www.sra.org.uk/home/home.page" target="_blank">Solicitors Regulation Authority</a></div>
 			</div>
 			<div class="col-xs-6 col-md-4">
-				<a href="https://www.tlwsolicitors.co.uk" class="visit-site-btn btn btn-default btn-block btn-lg" target="_blank">Visit the <span>TLW Solicitors</span> website</a>
+				<a href="https://www.tlwsolicitors.co.uk" class="visit-site-btn btn btn-block btn-lg" target="_blank">Visit the <span>TLW Solicitors</span> website</a>
 			</div>
 		</div>
 	</footer><!-- .site-footer -->

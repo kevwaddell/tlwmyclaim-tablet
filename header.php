@@ -12,7 +12,7 @@ $contact_pg = get_page_by_path( 'contact-us');
 ?>
 <div class="pg-nav nav-closed">
 	<div class="pag-nav-inner">
-	<button id="close-nav-btn" class="btn btn-default btn-block"><span class="sr-only">Close navigation</span><i class="fa fa-chevron-right"></i></button>
+	<button id="close-nav-btn" class="btn btn-block"><span class="sr-only">Close navigation</span><i class="fa fa-chevron-right"></i></button>
 	<?php if (current_user_can('administrator')) { ?>
 	<?php wp_nav_menu(array( 'container_class' => 'admin-links', 'theme_location' => 'admin-menu', 'fallback_cb' => false ) ); ?>
 	<?php } else { ?>
@@ -60,7 +60,7 @@ $contact_pg = get_page_by_path( 'contact-us');
 				</div>
 				<div class="col-xs-3">
 					<?php if (is_user_logged_in()) { ?>
-					<button id="nav-btn" class="btn btn-default btn-lg pull-right"><i class="fa fa-bars fa-lg"></i><span class="sr-only">Navigation menu</span></button>
+					<button id="nav-btn" class="btn btn-lg pull-right"><i class="fa fa-bars fa-lg"></i><span class="sr-only">Navigation menu</span></button>
 					<?php } ?>
 				</div>
 			</div>

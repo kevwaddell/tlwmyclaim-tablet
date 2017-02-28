@@ -509,3 +509,40 @@ margin: 0px 0px 20px 0px;
 		
 	}
 }
+
+.gform_wrapper {
+	
+	div.validation_error {
+	.no-border !important;
+	text-align: center;
+	.pad-all(1);	
+	.bg-col-red;
+	.txt-col-wht !important;
+	}
+	
+	.gform_body li.gfield.gfield_error {
+	.pad-all(1);	
+	}
+	
+	.gform_footer {
+		input.gform_button {
+		.block;
+		width: 100%;
+		.bg-col-red;
+		.no-border;
+		.txt-col-wht;
+		.font-slab-serif-bold;
+		.font-size(3);
+		.line-h(5);
+		.pad-all(0);
+		.caps;
+		.mag-bot(1.5);
+		.rel;
+		
+			&:active, &:focus {
+			.bg-col-red-dk;
+			.txt-col-wht;
+			}
+		}
+	}
+}

@@ -68,7 +68,7 @@ $users = get_users( $users_args );
 									[0]
 									<?php } else { ?>
 									<div class="btn-group">
-									  <button type="button" class="btn btn-default btn-block dropdown-toggle" style="text-align: left;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									  <button type="button" class="btn btn-block dropdown-toggle" style="text-align: left;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									    Select a case <span class="caret pull-right" style="margin-top: 8px;"></span>
 									  </button>
 									  <ul class="dropdown-menu">
