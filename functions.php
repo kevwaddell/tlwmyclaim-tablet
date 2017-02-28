@@ -125,9 +125,6 @@ add_action( 'init', 'register_shortcodes');
 remove_action('init', 'wp_admin_bar_init');
 
 function hide_admin_bar_from_front_end(){
-  if (is_blog_admin()) {
-    return true;
-  }
   return false;
 }
 add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
