@@ -40,9 +40,9 @@ $users = get_users( $users_args );
 					<table class="table table-bordered">
 						<tbody>
 							<tr>
-								<th width="40%" class="text-center">Client name</th>
-								<th width="30%" class="text-center">Cases</th>
-								<th width="30%" class="text-center"><i class="fa fa-info-circle"></i></th>
+								<th width="34%" class="text-center">Client name</th>
+								<th width="33%" class="text-center">Cases</th>
+								<th width="33%" class="text-center"><i class="fa fa-info-circle"></i></th>
 						  	</tr>
 						  	
 						  	<?php foreach ($users as $user) { 
