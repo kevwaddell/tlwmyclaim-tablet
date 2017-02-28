@@ -3867,6 +3867,8 @@ html.svg #masthead .logo a {
   background: -o-linear-gradient(#7A1039, #C60751);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7A1039', endColorstr='#C60751', GradientType=0);
   position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .jumbotron .container-fluid {
   position: relative;
@@ -3912,9 +3914,11 @@ html.svg #masthead .logo a {
   font-size: 45px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-family: "aleobold", "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+  margin-top: 0px;
 }
 .jumbotron p {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0px;
 }
 .hp-banner {
   min-height: 70vh;
