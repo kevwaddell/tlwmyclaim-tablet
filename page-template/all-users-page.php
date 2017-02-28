@@ -82,7 +82,7 @@ $users = get_users( $users_args );
 									</div>
 									<?php } ?>
 								</td>
-								<td class="text-center"><a href="<?php echo get_author_posts_url($user->ID); ?>" class="btn btn-success">View client details <i class="fa fa-chevron-right"></i></a></th>
+								<td class="text-center"><a href="<?php echo get_author_posts_url($user->ID); ?>" class="btn btn-default">View client details <i class="fa fa-chevron-right"></i></a></th>
 						  	</tr>
 						  	<?php } ?>
 						  	
