@@ -1,9 +1,7 @@
-<?php 
+<?php
 $user_id = $current_user->ID;
 $user_type = get_user_meta( $user_id, 'user_type', true); 
-$contact_pg = get_page_by_path( 'contact-us');
 ?>
-
 <div class="tml tml-profile" id="theme-my-login<?php $template->the_instance(); ?>">
 		<?php $template->the_action_template_message( 'profile' ); ?>
 		<?php $template->the_errors(); ?>
@@ -28,7 +26,7 @@ $contact_pg = get_page_by_path( 'contact-us');
 		<input type="hidden" name="nickname" id="nickname" value="<?php echo esc_attr( $profileuser->nickname ); ?>" />
 		<input type="hidden" name="email" id="email" value="<?php echo esc_attr( $profileuser->user_email ); ?>" />
 		
-		<div class="panel panel-default">
+		<div class="panel panel-default no-mag-bot">
 			  <div class="panel-heading text-center">Account Password</div>
 			  <div class="panel-body">
 				  			
@@ -41,7 +39,7 @@ $contact_pg = get_page_by_path( 'contact-us');
 					<tr id="password" class="user-pass1-wrap">
 						<td>
 							<input class="hidden form-control input-lg" value=" " /><!-- #24364 workaround -->
-							<button type="button" class="btn btn-success btn-block btn-lg wp-generate-pw hide-if-no-js"><i class="glyphicon glyphicon-refresh pull-right"></i>Generate New Password</button>
+							<button type="button" class="btn btn-block btn-lg wp-generate-pw hide-if-no-js orange-btn">Generate New Password<i class="fa fa-refresh"></i></button>
 							<div class="wp-pwd hide-if-js">
 								<span class="password-input-wrapper">
 									<input type="password" name="pass1" id="pass1" class="regular-text form-control input-lg" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />
@@ -81,7 +79,8 @@ $contact_pg = get_page_by_path( 'contact-us');
 					<input type="hidden" name="action" value="profile" />
 					<input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
 					<input type="hidden" name="user_id" id="user_id" value="<?php echo esc_attr( $current_user->ID ); ?>" />
-					<input type="submit" class="btn btn-lg btn-block button-primary" value="<?php esc_attr_e( 'Change password', 'theme-my-login' ); ?>" name="submit" id="submit" />
+<!-- 					<input type="submit" class="btn btn-lg btn-block button-primary" value="<?php esc_attr_e( 'Change password', 'theme-my-login' ); ?>" name="submit" id="submit" /> -->
+					<button id="update-profile" type="submit" class="btn btn-success btn-lg btn-block hidden">Change password<i class="fa fa-check"></i></button>
 					</p>
 			  </div>
 		</div>
@@ -89,7 +88,4 @@ $contact_pg = get_page_by_path( 'contact-us');
 	<?php do_action( 'show_user_profile', $profileuser ); ?>
 	
 	</form>
-	
-	<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-envelope fa-lg"></i><?php echo get_the_title($contact_pg->ID); ?></a>
-	
 </div>

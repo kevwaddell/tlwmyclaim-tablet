@@ -88,7 +88,7 @@ background-position: center center;
 	}
 	
 	.banner-links {
-	width: 80%;
+	//width: 80%;
 	margin: 30px auto 0px auto;	
 	}
 
@@ -97,9 +97,9 @@ background-position: center center;
 	.no-border;
 	//margin: auto;
 	.pad-all(0);
-	.h(5);
-	.line-h(5);
-	.font-size(2.5);
+	.h(4);
+	.line-h(4);
+	.font-size(2);
 	.caps;
 	.font-slab-serif;	
 	.bg-col-red;
@@ -116,11 +116,11 @@ background-position: center center;
 		.abs;
 		.top(0);
 		.right(0);
-		.line-h(5);
-		.w(5);
+		.line-h(4);
+		.w(4);
 		.bg-col-red-dk;
 		.border-radius( 4px, 4px, 0,0);
-		.font-size(2);
+		.font-size(1.6);
 		}
 	}
 	
@@ -258,6 +258,10 @@ background-position: center center;
 .rounded(6px);
 .mag-bot(1.5);
 
+	&.no-mag-bot {
+	.mag-bot(0);	
+	}
+
 	.panel-heading {
 	.gradient(@gray, @grayDk, @gray); 
 	.txt-col-wht;
@@ -281,6 +285,20 @@ background-position: center center;
 	.border(@wht; 0.2);
 	vertical-align: middle;
 	.pad-all(0.5);
+		a.btn {
+		.rel;
+		.mag-top(0);
+		.mag-bot(0);
+		.line-h(4);
+		.pad-all(0);
+		 	i {
+			 .rel;
+			.no-border;	
+			width: 100%;
+			.bg-col(@trans);
+			.line-h(4);
+		 	}
+		}
 	}
 	
 	.add-info-txt {

@@ -20,6 +20,35 @@
 		return false;
 		
 		});	
+		
+		$('body').on(event_type, 'button#contact-handler-btn', function(){
+			
+			$('#message-handler-form').toggleClass('form-closed form-open');
+			
+			return false;
+			
+		});
+		
+		$('body').on(event_type, 'button#message-handler-btn', function(){
+			
+			$('#message-handler-form').toggleClass('form-closed form-open');
+			
+			return false;
+			
+		});
+		
+		$('body').on(event_type, 'button.wp-generate-pw', function() {
+			if ( $('button#update-profile').hasClass('hidden') ) {
+				$('button#update-profile').removeClass('hidden');
+			}
+		});
+		
+		$('body').on(event_type, 'button.wp-cancel-pw', function() {
+			if ( !$('button#update-profile').hasClass('hidden') ) {
+				$('button#update-profile').addClass('hidden');
+			}
+		});
+
 	});
 	
 })(window.jQuery);

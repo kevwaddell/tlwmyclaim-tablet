@@ -12,7 +12,8 @@ Template Name: User Claims Page
 		<?php while ( have_posts() ) : the_post(); ?>
 		
 		<?php 
-		$account_pg = get_page_by_path( 'your-account' );
+		$dashboard_pg = get_page_by_path( 'dashboard' );
+		$account_pg = get_page_by_path( 'account-details' );
 		$contact_pg = get_page_by_path( 'contact-us');
 		?>
 		<div class="jumbotron wht-border-bottom">
@@ -63,7 +64,7 @@ Template Name: User Claims Page
 						 	
 							<div class="status-date"><?php echo $date; ?></div>
 							<div class="case-details"><span>Case type: <?php echo $claim_details['claim-type']; ?></span>|<span>Case Ref: <?php echo $case_ref; ?></span></div>
-							<div class="case-status"><?php echo $status; ?></div>
+							<div class="case-status"><i class="fa fa-check-circle txt-col-orange-dk fa-lg"></i> <?php echo $status; ?></div>
 							
 						</div>
 					
@@ -78,62 +79,69 @@ Template Name: User Claims Page
 									<th width="50%" class="text-center">Date created</th>
 							  	</tr>
 							  	<tr>
-									<td><strong><?php echo $case_ref; ?></strong></td>
-									<td><strong><?php echo $case_progress[0]['date']; ?></strong></td>
+									<td><?php echo $case_ref; ?></td>
+									<td><?php echo $case_progress[0]['date']; ?></td>
 							  	</tr>
 							  	<tr>
 									<th class="text-center">Claim Type</th>
 									<th class="text-center">Accident Date</th>
 							  	</tr>
 							  	<tr>
-									<td><strong><?php echo $claim_details['claim-type']; ?></strong></td>
-									<td><strong><?php echo $claim_details['accident-date']; ?></strong></td>
+									<td><?php echo $claim_details['claim-type']; ?></td>
+									<td><?php echo $claim_details['accident-date']; ?></td>
 							  	</tr>
 							  	<tr>
 									<th class="text-center">Case handler</th>
 									<th class="text-center">Case handler Email</th>
 							  	</tr>
 							  	<tr>
-									<td><strong><?php echo $fee_earner['name']; ?></strong></td>
-									<td><strong><a href="mailto:<?php echo $fee_earner['email']; ?>"><?php echo $fee_earner['email']; ?></a></strong></td>
+									<td><?php echo $fee_earner['name']; ?></td>
+									<td><a href="mailto:<?php echo $fee_earner['email']; ?>"><?php echo $fee_earner['email']; ?></a></td>
 							  	</tr>
 							</tbody>
 						</table>
 								
 						</div>	
 
-						<?php if (count($case_progress) > 0) { ?>
 						<div class="panel panel-default">
 		
 				 		<div class="panel-heading text-center">Case history</div>	
 				
-						<table class="table table-bordered">
-							<tbody>
-								<tr>
-									<th width="5%" class="text-center"><i class="fa fa-info-circle"></i></th>
-									<th width="30%" class="text-center">Date</th>
-									<th width="65%" class="text-center">Details</th>
-								</tr>
-							  	<?php 
-								//array_shift($case_progress);
-								foreach ($case_progress as $k => $progress) {
-							  	?>
-							  	<tr class="<?php echo ($k == 0) ? 'warning' : 'success'; ?>">
-								  	<td class="text-center"><i class="fa <?php echo ($k == 0) ? 'fa-hourglass-half text-warning' : 'fa-check-circle text-success'; ?>"></i></td>
-								  	<td class="text-center"><strong><?php echo $progress['date']; ?></strong></td>
-								  	<td class="text-center"><?php echo $progress['status']; ?></td>
-								</tr>	
-							  	<?php } ?>
-							  	
-							</tbody>
-						</table>
+							<table class="table table-bordered text-center">
+								<thead>
+									<tr>
+										<td colspan="3">Status: <span class="label label-success">Complete</span> <span class="label label-warning">In progress</span></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th width="40" class="text-center"><i class="fa fa-info-circle"></i></th>
+										<th width="30%" class="text-center">Date</th>
+										<th class="text-center">Details</th>
+									</tr>
+								  	<?php 
+									//array_shift($case_progress);
+									foreach ($case_progress as $k => $progress) {
+								  	?>
+								  	<tr class="<?php echo ($k == 0) ? 'warning' : 'success'; ?>">
+									  	<td class="text-center"><i class="fa <?php echo ($k == 0) ? 'fa-hourglass-half text-warning' : 'fa-check-circle text-success'; ?>"></i></td>
+									  	<td class="text-center"><?php echo $progress['date']; ?></td>
+									  	<td class="text-center"><?php echo $progress['status']; ?></td>
+									</tr>	
+								  	<?php } ?>
+								  	
+								</tbody>
+							</table>
 						
-					</div>
-						<?php } ?>
+						</div>
 						
-						<button id="contact-handler-btn" class="red-btn btn btn-block btn-lg"><i class="fa fa-comments fa-lg"></i>Message your case handler</button>
-						<a href="<?php echo get_permalink( $account_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-vcard fa-lg"></i>View Your Account details</a>
-						<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-envelope fa-lg"></i><?php echo get_the_title($contact_pg->ID); ?></a>
+						<button id="contact-handler-btn" class="orange-btn btn btn-block btn-lg"><i class="fa fa-comments fa-lg"></i>Message case handler</button>
+						<div class="rule"></div>
+						
+						<a href="<?php echo get_permalink( $dashboard_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-dashboard fa-lg"></i><?php echo get_the_title($dashboard_pg->ID); ?></a>
+							<a href="<?php echo get_permalink( $account_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-vcard"></i><?php echo get_the_title($account_pg->ID); ?></a>
+							<a href="<?php echo get_permalink( $contact_pg->ID ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-envelope fa-lg"></i><?php echo get_the_title($contact_pg->ID); ?></a>
+							<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg"><i class="fa fa-power-off fa-lg"></i>Log Out</a>
 					</div><!-- end of col -->
 					
 				</div><!-- end of row -->	

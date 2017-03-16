@@ -156,9 +156,26 @@ z-index: 10;
 	}
 	
 	#nav-btn {
-	.no-rounded;
-	.border(@grayDk; 0.4);
-	.mag-top(2);	
+	.mag-top(2);
+	.w(5.4);
+	.h(5.4);
+	.bg-col-wht;
+	.border(@grayDk; 0.2);
+	.txt-col-gray-dk;
+	.no-rounded;	
+	.pad-all(0);
+		&:hover, &:active, &:focus {
+		.bg-col-grayDk;
+		.txt-col-wht;
+		}
+		
+		i {
+		.block;	
+		.w(5);
+		text-align: center;
+		.line-h(5);
+		}
+	
 	}
 
 }

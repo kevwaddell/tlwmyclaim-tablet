@@ -3485,7 +3485,7 @@ article.page {
   min-height: 500px;
   background-color: white;
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 30px;
 }
 @media screen and (orientation: landscape) {
   article.post,
@@ -3531,27 +3531,36 @@ COLOUR STRIP
   background-color: #2D7EA9;
   border: none;
 }
-.red-btn {
-  background-color: #C60751;
+.btn {
   border: none;
   color: white;
   font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-stretch: normal;
-  font-size: 25px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 40px;
   padding: 0px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   position: relative;
 }
-.red-btn i {
+.btn.btn-block + .btn-block {
+  margin-top: 0px;
+}
+.btn i {
   position: absolute;
   top: 0px;
   right: 0px;
-  line-height: 50px;
-  width: 50px;
+  line-height: 40px;
+  width: 40px;
+  font-size: 16px;
+}
+.red-btn {
+  background-color: #C60751;
+}
+.red-btn i {
   background-color: #7A1039;
+  color: white;
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -webkit-border-bottom-left-radius: 0;
@@ -3567,13 +3576,97 @@ COLOUR STRIP
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-size: 20px;
 }
 .red-btn:hover,
 .red-btn:active,
 .red-btn:focus {
   background-color: #7A1039;
   color: white;
+}
+.red-btn.btn-block + .btn-block {
+  margin-top: 0px;
+}
+.blue-btn {
+  background-color: #2D7EA9;
+  color: white;
+}
+.blue-btn i {
+  background-color: #184258;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.blue-btn:hover,
+.blue-btn:active,
+.blue-btn:focus {
+  background-color: #184258;
+  color: white;
+}
+.orange-btn {
+  background-color: #df7c05;
+}
+.orange-btn i {
+  background-color: #FBAD4F;
+  color: #df7c05;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.orange-btn:hover,
+.orange-btn:active,
+.orange-btn:focus {
+  background-color: #FBAD4F;
+  color: #df7c05;
+}
+.btn-success {
+  background-color: #789b2c;
+}
+.btn-success i {
+  background-color: #ACD15C;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+  background-color: #ACD15C;
 }
 #global-tel-num {
   padding-top: 10px;
@@ -3842,11 +3935,28 @@ COLOUR STRIP
   text-align: center;
 }
 #masthead #nav-btn {
+  margin-top: 20px;
+  width: 54px;
+  height: 54px;
+  background-color: white;
+  border: 2px solid #4b4b4b;
+  color: #4b4b4b;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
-  border: 4px solid #4b4b4b;
-  margin-top: 20px;
+  padding: 0px;
+}
+#masthead #nav-btn:hover,
+#masthead #nav-btn:active,
+#masthead #nav-btn:focus {
+  background-color: #4b4b4b;
+  color: white;
+}
+#masthead #nav-btn i {
+  display: block;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
 }
 html.svg #masthead .logo a {
   background-image: url(/wp-content/themes/tlwmyclaim-tablet/_/css/img/tlw-logo-wide.svg);
@@ -3963,15 +4073,14 @@ html.svg #masthead .logo a {
   z-index: 2;
 }
 .hp-banner .banner-links {
-  width: 80%;
   margin: 30px auto 0px auto;
 }
 .hp-banner .btn {
   border: none;
   padding: 0px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 25px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
   text-transform: uppercase;
   font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -3994,8 +4103,8 @@ html.svg #masthead .logo a {
   position: absolute;
   top: 0px;
   right: 0px;
-  line-height: 50px;
-  width: 50px;
+  line-height: 40px;
+  width: 40px;
   background-color: #7A1039;
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
@@ -4012,7 +4121,7 @@ html.svg #masthead .logo a {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-size: 20px;
+  font-size: 16px;
 }
 .hp-banner:after {
   content: "";
@@ -4175,6 +4284,9 @@ html.svg #masthead .logo a {
   border-radius: 6px;
   margin-bottom: 15px;
 }
+.panel-default.no-mag-bot {
+  margin-bottom: 0px;
+}
 .panel-default .panel-heading {
   background: #918F8F;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4b4b4b), color-stop(1, #918F8F));
@@ -4239,6 +4351,26 @@ html.svg #masthead .logo a {
   border: 2px solid white;
   vertical-align: middle;
   padding: 5px;
+}
+.panel-default .table-bordered > tbody > tr > th a.btn,
+.panel-default .table-bordered > tbody > tr > td a.btn,
+.panel-default .table-bordered > thead > tr > td a.btn,
+.panel-default .table-bordered > tfoot > tr > td a.btn {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 40px;
+  padding: 0px;
+}
+.panel-default .table-bordered > tbody > tr > th a.btn i,
+.panel-default .table-bordered > tbody > tr > td a.btn i,
+.panel-default .table-bordered > thead > tr > td a.btn i,
+.panel-default .table-bordered > tfoot > tr > td a.btn i {
+  position: relative;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  line-height: 40px;
 }
 .panel-default .add-info-txt {
   height: 92px;
@@ -4708,6 +4840,7 @@ html.svg #masthead .logo a {
   border-radius: 8px;
   line-height: 22px;
   position: relative;
+  padding: 10px;
 }
 .site-footer .visit-site-btn:after {
   content: "\f0a9";
@@ -4844,21 +4977,37 @@ html.svg .site-footer #tlw-footer-logo {
   background-color: #C60751;
 }
 .tml-profile .tml-submit-wrap {
-  margin-top: 20px;
   margin-bottom: 0px;
+}
+.tml-profile button#update-profile {
+  margin-top: 20px;
 }
 .tml-profile .acf-field {
   display: none;
 }
+.tml-profile button.wp-hide-pw,
+.tml-profile button.wp-cancel-pw {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 10px 0px 10px;
+  background-color: #4b4b4b;
+  color: white;
+}
+.tml-profile button.wp-hide-pw:hover,
+.tml-profile button.wp-cancel-pw:hover,
+.tml-profile button.wp-hide-pw:active,
+.tml-profile button.wp-cancel-pw:active,
+.tml-profile button.wp-hide-pw:focus,
+.tml-profile button.wp-cancel-pw:focus {
+  background-color: #C60751;
+}
 /** --------------------------- /
 /* Sections */
 /* --------------------------- */
-#client-cases,
-#users-list {
+#client-cases {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#client-cases .btn-group,
-#users-list .btn-group {
+#client-cases .btn-group {
   width: 100%;
 }

@@ -69,9 +69,4 @@ $contact_pg = get_page_by_path( 'contact-us');
 	</header>
 	
 	<main id="main" class="site-main" role="main">
-		<?php if (!is_front_page()) { ?>
-		<div id="breadcrumbs">
-			<ul><?php bcn_display_list(); ?></ul>
-		</div>		
-		<?php } ?>
 		

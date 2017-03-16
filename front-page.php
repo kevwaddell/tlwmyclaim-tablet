@@ -11,7 +11,7 @@
 			global $current_user;
 			$user_id = $current_user->ID;
 			$user_type = get_user_meta( $user_id, 'user_type', true);
-			$account_pg = get_page_by_path( 'your-account' );	
+			$account_pg = get_page_by_path( 'account-details' );	
 			?>
 			
 			<div class="hp-banner jumbotron wht-border-bottom" style="background-image: url(<?php echo $banner_img; ?>)">
@@ -21,20 +21,36 @@
 				$dashboard_pg = get_page_by_path( 'dashboard' );
 				$your_claim_pg = get_page_by_path( 'your-claim' );	
 				?>
+				<div class="intro">
 				<?php the_content(); ?>	
+				</div>
 				<div class="banner-links">	
-					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-block btn-lg">
-						<i class="fa fa-dashboard"></i>
-						<?php echo get_the_title($dashboard_pg->ID); ?>
-					</a>
-					<a href="<?php echo get_permalink($your_claim_pg->ID ); ?>" class="btn btn-block btn-lg">
-						<i class="fa fa-folder-open"></i>
-						<?php echo get_the_title($your_claim_pg->ID); ?>
-					</a>
-					<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-block btn-lg">
-						<i class="fa fa-vcard"></i>
-						<?php echo get_the_title($account_pg->ID); ?>
-					</a>
+					<div class="row">
+						<div class="col-xs-6">
+						<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-block btn-lg">
+							<i class="fa fa-dashboard"></i>
+							<?php echo get_the_title($dashboard_pg->ID); ?>
+						</a>
+						</div>
+						<div class="col-xs-6">
+						<a href="<?php echo get_permalink($your_claim_pg->ID ); ?>" class="btn btn-block btn-lg">
+							<i class="fa fa-folder-open"></i>
+							<?php echo get_the_title($your_claim_pg->ID); ?>
+						</a>
+						</div>
+						<div class="col-xs-6">
+						<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="btn btn-block btn-lg">
+							<i class="fa fa-vcard"></i>
+							<?php echo get_the_title($account_pg->ID); ?>
+						</a>
+						</div>
+						<div class="col-xs-6">
+						<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-power-off"></i>
+								Log Out
+						</a>
+						</div>
+					</div>
 				</div>	
 				<?php } ?>
 				
@@ -43,7 +59,9 @@
 				$cases_pg =  get_option('page_for_posts');	
 				$banner_intro = get_field( 'hp_banner_ref_intro', 'options' );	
 				?>
+				<div class="intro">
 				<?php echo $banner_intro; ?>
+				</div>
 				<div class="banner-links">
 					<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-dashboard"></i>
@@ -57,6 +75,10 @@
 						<i class="fa fa-vcard"></i>
 						<?php echo get_the_title($account_pg->ID); ?>
 					</a>
+					<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+						<i class="fa fa-power-off"></i>
+							Log Out
+					</a>
 				</div>		
 				<?php } ?>
 				
@@ -66,7 +88,9 @@
 				$referrers_pg = get_page_by_path( 'referrers' );
 				$banner_intro = get_field( 'hp_banner_admin_intro', 'options' );		
 				?>
+				<div class="intro">
 				<?php echo $banner_intro; ?>
+				</div>
 				<div class="banner-links">	
 					<a href="<?php echo get_permalink($cases_pg); ?>" class="btn btn-block btn-lg">
 						<i class="fa fa-folder-open"></i>
@@ -80,6 +104,10 @@
 						<i class="fa fa-building"></i>
 						<?php echo get_the_title($referrers_pg->ID); ?>
 					</a>
+					<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+						<i class="fa fa-power-off"></i>
+							Log Out
+					</a>
 				</div>	
 				<?php } ?>
 				
@@ -92,7 +120,9 @@
 			
 			<div class="hp-banner jumbotron wht-border-bottom" style="background-image: url(<?php echo $banner_img; ?>)">
 				<div class="container-fluid">
+					<div class="intro">
 					<?php echo $banner_intro; ?>
+					</div>
 					<div class="banner-links">
 						<a href="<?php echo get_permalink( $login_pg->ID ); ?>" class="btn btn-block btn-lg"><i class="fa fa-sign-in"></i>Login now</a>
 					</div>
