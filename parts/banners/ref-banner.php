@@ -1,6 +1,7 @@
 <?php
 $dashboard_pg = get_page_by_path( 'dashboard' );
 $cases_pg =  get_option('page_for_posts');	
+$account_pg = get_page_by_path( 'account-details' );	
 $banner_intro = get_field( 'hp_banner_ref_intro', 'options' );	
 ?>
 <div class="intro">

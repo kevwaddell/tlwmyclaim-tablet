@@ -1,6 +1,7 @@
 <?php
 $dashboard_pg = get_page_by_path( 'dashboard' );
 $your_claim_pg = get_page_by_path( 'your-claim' );	
+$account_pg = get_page_by_path( 'account-details' );	
 ?>
 
 <div class="intro">

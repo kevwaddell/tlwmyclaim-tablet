@@ -4515,6 +4515,7 @@ html.svg #masthead .logo a {
 }
 .dashboard-alert {
   border: none;
+  margin-bottom: 0px;
 }
 .dashboard-alert .alert-heading {
   color: white;

@@ -1,8 +1,8 @@
 <tbody>
 	<tr>
-		<th width="25%" class="text-center">Client name:</th>
-		<th width="50%" class="text-center">Progress status:</th>
-		<th width="25%" class="text-center">Case handler:</th>
+		<th width="30%" class="text-center">Client name:</th>
+		<th class="text-center">Progress status:</th>
+		<th width="30%" class="text-center">Case handler:</th>
   	</tr>
   	<?php while ( have_posts() ) : the_post(); ?>
   	<?php
@@ -18,7 +18,7 @@
   	<tr class="<?php echo ($case_status == "open") ? 'success':'warning'; ?>">
 	  	<td><?php echo $client_personal[title]; ?> <?php echo $client_personal[forename]; ?> <?php echo $client_personal[surname]; ?></td>
 	  	<td><?php echo $case_progress[count($case_progress) - 1][date]; ?>: <?php echo $case_progress[count($case_progress) - 1][status]; ?></td>
-	  	<td><a href="mailto:<?php echo $fee_earner[email]; ?>" class="btn btn-<?php echo ($case_status == "open") ? 'success':'warning'; ?>" title="Email <?php echo $fee_earner[name]; ?>"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<?php echo $fee_earner[name]; ?></a></td>
+	  	<td><?php echo $fee_earner[name]; ?></td>
   	</tr>
   	<?php endwhile; ?>
 </tbody>
