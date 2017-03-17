@@ -10,7 +10,7 @@ $user_type = get_user_meta( $user_id, 'user_type', true);
 $account_pg = get_page_by_path( 'your-account' );
 $contact_pg = get_page_by_path( 'contact-us');
 ?>
-<div class="pg-nav nav-closed">
+<div id="main-nav" class="pg-nav nav-closed">
 	<div class="pag-nav-inner">
 	<button id="close-nav-btn" class="btn btn-block"><span class="sr-only">Close navigation</span><i class="fa fa-chevron-right"></i></button>
 	<?php if (current_user_can('administrator')) { ?>

@@ -38,9 +38,9 @@ if ( is_user_logged_in() && ($user_type == "ref" || $user_type == "admin") ) { ?
 					<?php if ( have_posts() ) : ?>
 					<section id="client-cases">
 						
-					<div class="panel panel-default">	
+					<div class="panel panel-default no-mag-bot">	
 						
-						<div class="panel-heading text-center">Recent cases</div>	
+						<div class="panel-heading text-center">Client cases</div>	
 						
 						<table class="table table-bordered text-center">
 							<thead>
@@ -73,6 +73,50 @@ if ( is_user_logged_in() && ($user_type == "ref" || $user_type == "admin") ) { ?
 							<p>There are no open cases at the moment.</p>
 						</div>
 					<?php endif; ?>
+					
+						<div class="rule"></div>
+						
+						<?php if ($user_type == "admin") { 
+						$clients_pg = get_page_by_path( 'clients' );
+						$referrers_pg = get_page_by_path( 'referrers' );	
+						$home_pg = get_option('page_on_front');	
+						?>
+						<a href="<?php echo get_permalink($home_pg); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-home"></i>
+							Home
+						</a>
+						<a href="<?php echo get_permalink($clients_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-users"></i>
+							<?php echo get_the_title($clients_pg->ID); ?> archive
+						</a>
+						<a href="<?php echo get_permalink($referrers_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-building"></i>
+							<?php echo get_the_title($referrers_pg->ID); ?> archive
+						</a>
+						<?php } else {
+						$dashboard_pg = get_page_by_path( 'dashboard' );
+						$account_pg = get_page_by_path( 'account-details' );		
+						$contact_pg = get_page_by_path( 'contact-us');
+						?>
+						<a href="<?php echo get_permalink($dashboard_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-dashboard"></i>
+							<?php echo get_the_title($dashboard_pg->ID); ?>
+						</a>
+						<a href="<?php echo get_permalink($account_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-vcard"></i>
+							<?php echo get_the_title($account_pg->ID); ?>
+						</a>
+						<a href="<?php echo get_permalink($contact_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-envelope"></i>
+							<?php echo get_the_title($contact_pg->ID); ?>
+						</a>
+						<?php } ?>
+						
+						<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+							<i class="fa fa-power-off"></i>
+							Log Out
+						</a>
+
 	
 	
 				</div>

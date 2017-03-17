@@ -38,15 +38,9 @@ height: 100%;
 width: 100%;
 .rel;
 .bg-col-grayDk;
-.transition(0.5s);
+//.transition(0.5s);
 	&.nav-open {
-	.drop-shadow(0, 0, 20px, 0.5);
-	-moz-transform: translate(-300px, 0px);
-	-webkit-transform: translate(-300px, 0px);
-	-o-transform: translate(-300px, 0px);
-	-ms-transform: translate(-300px, 0px);
-	transform: translate(-300px, 0px);
-	pointer-events: none;
+	//.opacity(0.5);
 		.site-main, #masthead {
 		.opacity(0.5);	
 		}
@@ -69,7 +63,7 @@ overflow: scroll;
 article.post, article.page {
 .min-h(50);
 .bg-col-wht;
-.pad-top(1.5);
+.pad-top(3);
 .pad-bot(3);	
 	@media screen and (orientation: landscape) {
 	.min-h(25);
@@ -146,6 +140,24 @@ z-index: 2;
 	}
 }
 
+.dropdown-toggle {
+.font-size(1.6);
+.line-h(4);
+.bg-col-grayDk;
+.pad(0;3;0;1);
+//.pad-right(4);	
+.no-border;
+width: 100%;
+	i {
+	.line-h(4);	
+	.pad-left(1);
+	}
+	&:hover, &:active, &:focus {
+	.bg-col-red;
+	.txt-col-wht;
+	}
+}
+
 .red-btn {
 .bg-col-red;
 	i {
@@ -207,6 +219,14 @@ z-index: 2;
 	.bg-col-green;
 	}
 	
+}
+
+.label-success {
+.bg-col-green-dk;
+}
+
+.label-warning {
+.bg-col-orange-dk;
 }
 
 #global-tel-num {

@@ -291,13 +291,39 @@ background-position: center center;
 		.mag-bot(0);
 		.line-h(4);
 		.pad-all(0);
+		.bg-col-red;
+		.txt-col-wht;
 		 	i {
-			 .rel;
+			.rel;
 			.no-border;	
 			width: 100%;
 			.bg-col(@trans);
 			.line-h(4);
 		 	}
+		 	
+		 	&:active, &:focus {
+		 	.bg-col-red-dk;
+		 	}
+		 	
+		 	&.btn-success {
+			.bg-col-green-dk;
+				 &:active, &:focus {
+			 	.bg-col-green;
+			 	}	
+		 	}
+		 	
+		 	&.btn-warning {
+			.bg-col-orange-dk;
+				 &:active, &:focus {
+			 	.bg-col-orange;
+			 	}	
+		 	}
+		}
+		
+		
+		.btn-group {
+		.block;
+		width: 100%;	
 		}
 	}
 	
@@ -429,7 +455,7 @@ margin: 20px 0px 20px 0px;
 	.h(5);
 	.line-h(5);
 	.font-slab-serif;
-	.mag-bot(1.5);
+	.mag-bot(4.5);
 	.txt-col-wht;
 	.rel;
 	.rounded(4px);

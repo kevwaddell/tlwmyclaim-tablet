@@ -17,6 +17,10 @@ Template Name: Clients List page
 $users = get_users( $users_args ); 
 //$users = false;
 //echo '<pre class="debug">';print_r($users);echo '</pre>';
+
+$cases_pg =  get_option('page_for_posts');
+$referrers_pg = get_page_by_path( 'referrers' );
+$home_pg = get_option('page_on_front');	
 ?>
 <?php if ( have_posts() ) : ?>
 
@@ -35,16 +39,21 @@ $users = get_users( $users_args );
 					<?php if (!empty($users)) { ?>
 					<section id="users-list">
 		
-						<div class="panel panel-default">	
+						<div class="panel panel-default no-mag-bot">	
 				
 							<div class="panel-heading text-center">Clients</div>	
 				
-							<table class="table table-bordered">
+							<table class="table table-bordered text-center">
+								<thead>
+									<tr>
+										<td colspan="3">Total clients: <?php echo count($users); ?></td>
+									</tr>
+								</thead>
 								<tbody>
 									<tr>
-										<th width="34%" class="text-center">Client name</th>
-										<th width="30%" class="text-center">Cases</th>
-										<th width="30%" class="text-center"><i class="fa fa-info-circle"></i></th>
+										<th width="20%" class="text-center">Cases</th>
+										<th class="text-center">Client name</th>
+										<th width="50" class="text-center"><i class="fa fa-vcard"></i></th>
 								  	</tr>
 								  	
 								  	<?php foreach ($users as $user) { 
@@ -64,27 +73,30 @@ $users = get_users( $users_args );
 									//echo '<pre class="debug">';print_r($claims);echo '</pre>';
 								  	?>
 								  	<tr>
-										<td class="text-center" style="vertical-align: middle;"><?php echo $client_personal[title]; ?> <?php echo $client_personal[forename]; ?> <?php echo $client_personal[surname]; ?></td>
 										<td class="text-center" style="vertical-align: middle;">
-											<?php if (empty($claims)) { ?>
-											[0]
-											<?php } else { ?>
-											<div class="btn-group">
-											  <button type="button" class="btn btn-block btn-default dropdown-toggle" style="text-align: left;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											    Select a case <span class="caret pull-right" style="margin-top: 8px;"></span>
-											  </button>
-											  <ul class="dropdown-menu">
-												  <?php foreach ($claims as $claim) { 
-												   $case_ref = get_post_meta( $claim->ID, 'case_ref', true);
-												  ?>
-												  <li><a href="<?php echo get_permalink( $claim->ID ); ?>"><?php echo $case_ref; ?></a></li>
-												  <?php } ?>
-											   
-											  </ul>
-											</div>
-											<?php } ?>
+											<?php if (count($claims) > 1) { ?>
+										  	<div class="btn-group">
+										  		<button type="button" class="btn btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										    <span class="sr-only">Select a case</span> <i class="fa fa-folder-open"></i>
+										  </button>
+										  <ul class="dropdown-menu">
+											  <?php foreach ($claims as $claim) { 
+											   $case_ref = get_post_meta( $claim->ID, 'case_ref', true);
+											  ?>
+											  <li><a href="<?php echo get_permalink( $claim->ID ); ?>"><?php echo $case_ref; ?><i class="fa fa-angle-right pull-right" style="line-height: 18px;"></i></a></li>
+											  <?php } ?>
+										   
+										  </ul>
+										</div>
+										  	<?php } else { 
+											$case_ref = get_post_meta( $claims[0]->ID, 'case_ref', true);
+											$case_status = get_post_meta( $claims[0]->ID, 'case_status', true);
+										  	?>
+										  	<a href="<?php echo get_permalink( $claims[0]->ID ); ?>"><i class="fa fa-folder-open text-<?php echo ($case_status == 'open') ? 'success':'warning'; ?>"></i> <?php echo $case_ref; ?></a>
+										  	<?php } ?>
 										</td>
-										<td class="text-center"><a href="<?php echo get_author_posts_url($user->ID); ?>" class="btn btn-default btn-block">View client details <i class="fa fa-angle-right pull-right"></i></a></th>
+										<td class="text-center" style="vertical-align: middle;"><?php echo $client_personal[title]; ?> <?php echo $client_personal[forename]; ?> <?php echo $client_personal[surname]; ?></td>
+										<td class="text-center"><a href="<?php echo get_author_posts_url($user->ID); ?>" class="btn btn-block"><span class="sr-only">View client details</span> <i class="fa fa-chevron-right"></i></a></th>
 								  	</tr>
 								  	<?php } ?>
 								  	
@@ -100,6 +112,21 @@ $users = get_users( $users_args );
 							<p>There are no clients at the moment.</p>
 						</div>
 					<?php } ?>
+					<div class="rule"></div>
+					<div class="btns-group">
+					<a href="<?php echo get_permalink($home_pg); ?>" class="red-btn btn btn-block btn-lg">
+						Home <i class="fa fa-home"></i>
+					</a>	
+					<a href="<?php echo get_permalink($cases_pg); ?>" class="red-btn btn btn-block btn-lg">
+						<?php echo get_the_title($cases_pg); ?> archive <i class="fa fa-folder-open"></i>
+					</a>
+					<a href="<?php echo get_permalink($referrers_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+						<?php echo get_the_title($referrers_pg->ID); ?> archive <i class="fa fa-building"></i>
+					</a>
+					<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+						Log Out <i class="fa fa-power-off"></i>
+					</a>
+				</div>
 				</div>	<!-- End of .col -->
 			</div> <!-- End of .row -->
 		</div> <!-- End of .container -->

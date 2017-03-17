@@ -602,6 +602,24 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
+	"\/parts\/banners\/admin-banner.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/banners\/admin-banner.php",
+		"oF": 0
+		},
+	"\/parts\/banners\/client-banner.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/banners\/client-banner.php",
+		"oF": 0
+		},
+	"\/parts\/banners\/ref-banner.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/banners\/ref-banner.php",
+		"oF": 0
+		},
 	"\/parts\/cases\/admin-caselist.php": {
 		"ft": 8192,
 		"oA": 2,

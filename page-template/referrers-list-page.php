@@ -17,6 +17,10 @@ Template Name: Referrers List page
 $users = get_users( $users_args ); 
 //$users = false;
 //echo '<pre class="debug">';print_r($users);echo '</pre>';
+
+$cases_pg =  get_option('page_for_posts');
+$clients_pg = get_page_by_path( 'clients' );
+$home_pg = get_option('page_on_front');	
 ?>
 
 
@@ -41,12 +45,17 @@ $users = get_users( $users_args );
 					
 								<div class="panel-heading text-center">Referrers</div>	
 					
-								<table class="table table-bordered">
+									<table class="table table-bordered text-center">
+									<thead>
+										<tr>
+											<td colspan="3">Case status: <span class="label label-success">Open</span> <span class="label label-warning">Closed</span></td>
+										</tr>
+									</thead>
 									<tbody>
 										<tr>
-											<th width="34%" class="text-center">Company</th>
-											<th width="33%" class="text-center">Main contact</th>
-											<th width="33%" class="text-center">Number of cases</th>
+											<th width="35%" class="text-center">Company</th>
+											<th width="35%" class="text-center">Main contact</th>
+											<th width="25%" class="text-center">Number of cases</th>
 									  	</tr>
 									  	
 									  	<?php foreach ($users as $user) { 
@@ -81,8 +90,8 @@ $users = get_users( $users_args );
 											   		}
 											   }
 											  ?>
-											 <span class="label block label-success" style="margin-bottom: 5px;">Open cases: <?php echo $open; ?></span> 
-											 <span class="label block label-danger">Closed cases: <?php echo $closed; ?></span>
+											 <span class="label label-success"><?php echo $open; ?></span> 
+											 <span class="label label-warning"><?php echo $closed; ?></span>
 												</div>
 											</td>
 									  	</tr>
@@ -102,6 +111,23 @@ $users = get_users( $users_args );
 						</div>
 				
 						<?php } ?>
+						
+						<div class="rule"></div>
+						<div class="btns-group">
+							<a href="<?php echo get_permalink($home_pg); ?>" class="red-btn btn btn-block btn-lg">
+							Home <i class="fa fa-home"></i>
+							</a>
+							<a href="<?php echo get_permalink($cases_pg); ?>" class="red-btn btn btn-block btn-lg">
+							<?php echo get_the_title($cases_pg); ?> archive <i class="fa fa-folder-open"></i>
+							</a>
+							<a href="<?php echo get_permalink($clients_pg->ID ); ?>" class="red-btn btn btn-block btn-lg">
+							<?php echo get_the_title($clients_pg->ID); ?> archive <i class="fa fa-users"></i>
+							</a>
+							<a href="<?php echo wp_logout_url( $redirect ); ?>" class="red-btn btn btn-block btn-lg">
+								Log Out <i class="fa fa-power-off fa-lg"></i>
+							</a>
+						</div>
+
 					</div>
 				</div>
 			</div>

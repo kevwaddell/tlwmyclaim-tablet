@@ -1,8 +1,9 @@
 <tbody>
 	<tr>
-		<th width="35%" class="text-center">Case referrence:</th>
-		<th width="35%" class="text-center">Client name:</th>
-		<th width="30%" class="text-center"><i class="fa fa-eye fa-lg"></i></th>
+		<th width="55" class="text-center"><i class="fa fa-info-circle fa-lg"></i></th>
+		<th width="30%" class="text-center">Case referrence:</th>
+		<th class="text-center">Client name:</th>
+		<th width="55" class="text-center"><i class="fa fa-folder-open fa-lg"></i></th>
   	</tr>
   	<?php while ( have_posts() ) : the_post(); ?>
   	<?php
@@ -16,9 +17,10 @@
 	//echo '<pre class="debug">';print_r($case_status);echo '</pre>';
   	?>
   	<tr class="<?php echo ($case_status == "open") ? 'success':'warning'; ?>">
+	  	<td><i class="fa fa-<?php echo ($case_status == "open") ? 'folder-open text-success':'folder text-warning'; ?> fa-lg"></i></td>
 	  	<td><?php echo $case_ref; ?></td>
 	  	<td><?php echo $client_personal[title]; ?> <?php echo $client_personal[forename]; ?> <?php echo $client_personal[surname]; ?></td>
-	  	<td><a href="<?php the_permalink(); ?>" class="caps font-slab-serif btn btn-block btn-default">View case details <i class="fa fa-angle-right pull-right"></i></a></td>
+	  	<td><a href="<?php the_permalink(); ?>" class="caps font-slab-serif btn btn-block btn-<?php echo ($case_status == "open") ? 'success':'warning'; ?>"><span class="sr-only">View case details</span><i class="fa fa-chevron-right"></i></a></td>
   	</tr>
   	<?php endwhile; ?>
 </tbody>
