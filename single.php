@@ -1,5 +1,6 @@
 <?php 
 $user_id = get_current_user_id();	
+$user_type = get_user_meta( $user_id, 'user_type', true);
 ?>
 <?php if ($post->post_author == $user_id || current_user_can( 'administrator' ) ) { ?>
 <?php get_header(); ?>
@@ -208,6 +209,19 @@ $user_id = get_current_user_id();
 			</section>
 			
 		</article><!-- #post-## -->
+		
+		<?php if ( $user_type == 'client' ) { ?>
+		<?php 
+		$field_values = array('fee-earner-name' => $fee_earner['name'], 'fee-earner-email' =>$fee_earner['email']);
+		?>
+			<section id="message-handler-form" class="message-form form-closed">
+				<button id="message-handler-btn" class="btn btn-block">Message case handler</button>
+				<div class="message-form-wrap">
+					<?php gravity_form( 2, false, false, false, $field_values, true ); ?>
+				</div>
+			</section>
+		<?php } ?>
+		
 		<?php endwhile; ?>
 
 <?php endif; ?>

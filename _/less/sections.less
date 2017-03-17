@@ -1,0 +1,93 @@
+.message-form {
+.fixed;
+left: 50%;
+bottom: -5px;
+.bg-col-wht;
+z-index: 200;
+.border-radius(4px, 0, 0, 4px);
+.drop-shadow(0, -3px, 10px, 0.5);
+.transition(0.5s);
+.border-top(@wht; 0.4);
+.border-left(@wht; 0.4);
+.border-right(@wht; 0.4);
+width: 80%;
+margin-left: -40%;
+
+	.btn {
+	.font-size(2);
+	.line-h(5);
+	.pad-all(0);	
+	.txt-col-wht;
+	.bg-col-orange-dk;
+	.border-radius(4px, 0, 0, 4px);
+	.no-rounded;
+	.font-slab-serif-bold;
+	.rel;
+		&:after {
+		font-family: FontAwesome;	
+		.abs;
+		.right(0);
+		.top(0);
+		.line-h(5);
+		.pad-right(2);
+		.font-size(2);	
+		}
+	}
+	
+	.gform_wrapper {
+	.pad(0;2;2;2);	
+	}
+	
+	.gform_confirmation_wrapper {
+	.pad-all(2);	
+		p {
+		.txt-col-gray-dk;	
+		}
+	}
+	
+	.message-form-wrap {	
+	.over-hide;
+	.transition(0.5s);
+	}
+	
+	form label {
+	.txt-col-gray;	
+	}
+	
+	&.form-closed {
+		.message-form-wrap {
+		.h(0);	
+		.opacity(0);
+		}
+		.btn:after {
+		content: "\f086";	
+		}
+	}
+	
+	&.form-open {
+		.message-form-wrap {
+		height: auto;
+		.opacity(1);
+		}
+		.btn:after {
+		content: "\f107";	
+		}
+	}
+	
+	form {
+		.gform_button {
+		display: block;
+		width: 95% !important;
+		.bg-col-red-dk;
+		.font-slab-serif-bold;
+		.caps;
+		.pad-all(0);
+		.line-h(4);
+		.font-size(1.6);
+		.no-border;
+			&:hover, &:active, &:focus {
+			.bg-col-red;
+			}
+		}	
+	}
+}

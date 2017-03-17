@@ -4890,7 +4890,7 @@ html.svg #masthead .logo a {
   background-color: #4b4b4b;
   color: white;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -5133,3 +5133,132 @@ html.svg .site-footer #tlw-footer-logo {
 /** --------------------------- /
 /* Sections */
 /* --------------------------- */
+.message-form {
+  position: fixed;
+  left: 50%;
+  bottom: -5px;
+  background-color: white;
+  z-index: 200;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 4px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  width: 80%;
+  margin-left: -40%;
+}
+.message-form .btn {
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0px;
+  color: white;
+  background-color: #df7c05;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 4px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-family: "aleobold", "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  position: relative;
+}
+.message-form .btn:after {
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  line-height: 50px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+.message-form .gform_wrapper {
+  padding: 0px 20px 20px 20px;
+}
+.message-form .gform_confirmation_wrapper {
+  padding: 20px;
+}
+.message-form .gform_confirmation_wrapper p {
+  color: #4b4b4b;
+}
+.message-form .message-form-wrap {
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.message-form form label {
+  color: #918F8F;
+}
+.message-form.form-closed .message-form-wrap {
+  height: 0px;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+}
+.message-form.form-closed .btn:after {
+  content: "\f086";
+}
+.message-form.form-open .message-form-wrap {
+  height: auto;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+}
+.message-form.form-open .btn:after {
+  content: "\f107";
+}
+.message-form form .gform_button {
+  display: block;
+  width: 95% !important;
+  background-color: #7A1039;
+  font-family: "aleobold", "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  padding: 0px;
+  line-height: 40px;
+  font-size: 16px;
+  border: none;
+}
+.message-form form .gform_button:hover,
+.message-form form .gform_button:active,
+.message-form form .gform_button:focus {
+  background-color: #C60751;
+}
