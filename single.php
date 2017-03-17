@@ -45,6 +45,7 @@ $user_id = get_current_user_id();
 						
 						<?php if ( current_user_can( 'administrator' ) ) { ?>
 						<div class="status-label caps status-<?php echo $case_status; ?> block text-center">
+							<i class="fa fa-<?php echo ($case_status == 'open') ? 'check':'close'; ?> fa-lg"></i>
 							Case status: <strong><?php echo $case_status; ?></strong>
 							<i class="fa fa-folder-<?php echo ($case_status == 'open') ? 'open':''; ?> fa-lg"></i>
 						</div>

@@ -467,13 +467,22 @@ margin: 20px 0px 20px 0px;
 	
 		i {
 		.abs;
-		.right(0);
 		.top(0);
 		.w(5);
 		.h(5);
 		.line-h(5);	
 		.txt-col-wht;
-		.border-radius(4px, 4px, 0, 0);
+			
+			&.fa-folder, &.fa-folder-open {
+			.right(0);
+			.border-radius(4px, 4px, 0, 0);
+			}
+		
+			&.fa-check, &.fa-close {
+			.left(0);
+			.border-radius( 0, 0, 4px, 4px);	
+			}
+			
 		}
 		&.status-open {
 		.bg-col-green;
